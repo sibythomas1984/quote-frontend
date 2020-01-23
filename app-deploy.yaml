@@ -73,9 +73,10 @@ spec:
       prometheus.io/scrape: "true"
     port: 3000
     type: NodePort
+  env:  
+  - name: BACKEND_URL
+    value: http://quote-backend:8080/quote  
   stack: nodejs-express
   version: 1.0.0
 status: {}
-env:  
-- name: BACKEND_URL
-  value: http://quote-backend:8080/quote
+
